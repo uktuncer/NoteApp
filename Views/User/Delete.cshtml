@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcı Sil";
+}
+<div class="row p-1">
+    <div class="col mb-1">
+        <h3 class="display-4 border-bottom">Kullanıcı Sil</h3>
+    </div>
+</div>
+
+<div class="row p-4">
+    <div class="col">
+        <p class="text-danger">
+            İlgili Kullanıcıyı Silmek İstediğinize Emin Misiniz? </br>
+            <small>Bu İşlem Geri Alınamaz!</small>
+        </p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-4">
+        <dl class="row">
+            <dt class="col-4">Ad Soyad</dt>
+            <dd class="col-8">Umut Kürşat TUNCER</dd>
+
+            <dt class="col-4">Kullanıcı Adı</dt>
+            <dd class="col-8">utuncer</dd>
+
+            <dt class="col-4">E-Posta Adresi</dt>
+            <dd class="col-8">eposta@gmail.com</dd>
+
+            <dt class="col-4">Aktif</dt>
+            <dd class="col-8"><i class="fa fa-star"></i></dd>
+
+            <dt class="col-4">YÖnetici</dt>
+            <dd class="col-8"><i class="fa fa-star"></i></dd>
+
+            <dt class="col-4">Oluşturan</dt>
+            <dd class="col-8">Umut Kürşat TUNCER</dd>
+
+            <dt class="col-4">Oluşturma Tarihi</dt>
+            <dd class="col-8">31.05.2023</dd>
+
+            <dt class="col-4">Güncelleyen</dt>
+            <dd class="col-8">Umut Kürşat TUNCER</dd>
+
+            <dt class="col-4">Güncelleme Tarihi</dt>
+            <dd class="col-8">31.05.2023</dd>
+        </dl>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <form method="post" asp-action="Delete">
+            <button type="submit" class="btn btn-danger btn-sm mt-3"><i class="fa fa-trash"></i> Kullanıcı Sil</button>
+            <a class="btn btn-secondary btn-sm mt-3" asp-action="Index"><i class="fa fa-arrow-left"></i>Listeye Dön</a>
+        </form>
+    </div>
+</div>

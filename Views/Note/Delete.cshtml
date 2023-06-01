@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Yazı Sil";
+}
+<div class="row p-1">
+    <div class="col mb-1">
+        <h3 class="display-4 border-bottom">Yazı Sil</h3>
+    </div>
+</div>
+
+<div class="row p-4">
+    <div class="col">
+        <p class="text-danger">
+            İlgili Yazıyı Silmek İstediğinize Emin Misiniz?</br>
+            <small>Bu İşlem Geri Alınamaz!</small>
+        </p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-4">
+        <dl class="row">
+            <dt class="col-4">Kategori</dt>
+            <dd class="col-8">Innova</dd>
+
+            <dt class="col-4">Başlık</dt>
+            <dd class="col-8">Başlık Kısmı</dd>
+
+            <dt class="col-4">Özet</dt>
+            <dd class="col-8">Özet Kısmı</dd>
+
+            <dt class="col-4">Taslak</dt>
+            <dd class="col-8"><i class="fa fa-user"></i> Özet Kısmı</dd>
+
+            <dt class="col-4">Beğeni Adedi</dt>
+            <dd class="col-8">85</dd>
+
+            <dt class="col-4">Yorum Adedi</dt>
+            <dd class="col-8">20</dd>
+
+            <dt class="col-4">Oluşturan</dt>
+            <dd class="col-8">Umut Kürşat TUNCER</dd>
+
+            <dt class="col-4">Oluşturma Tarihi</dt>
+            <dd class="col-8">31.05.2023</dd>
+
+            <dt class="col-4">Güncelleyen</dt>
+            <dd class="col-8">Umut Kürşat TUNCER</dd>
+
+            <dt class="col-4">Güncelleme Tarihi</dt>
+            <dd class="col-8">31.05.2023</dd>
+        </dl>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <form method="post" asp-action="Delete">
+            <button type="submit" class="btn btn-danger btn-sm mt-3"><i class="fa fa-trash"></i> Yazı Sil</button>
+            <a class="btn btn-secondary btn-sm mt-3" asp-action="Index"><i class="fa fa-arrow-left"></i> Listeye Dön</a>
+        </form>
+    </div>
+</div>

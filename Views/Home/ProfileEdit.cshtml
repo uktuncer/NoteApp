@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Profil Düzenle";
+}
+
+<div class="row p-4">
+    <div class="col">
+        <h3 class="display-4 border-bottom">Kullanıcı Hesabı</h3>
+    </div>
+</div>
+
+<div class="row p-4">
+   <div class="col-3 text-center">
+        <img src="https://picsum.photos/id/180/128" class="rounded-circle img-thumbnail" />
+        <div class="mt-4">
+            <form method="post" enctype="multipart/form-data"> 
+                <div>
+                <input type="file" class="form-control" />
+                <small>Lütfen sadece jpeg, jpg veya png formatında dosya yükleyiniz.</small>
+                </div>
+                <div class="mt-2">
+                    <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-upload"></i> Yükle</button>
+                </div>
+
+            </form>
+        </div>
+   </div>
+   <div class="col-3 offset-1">
+        <form>
+            <div class="form-group ">
+                <label for="fullname">Ad Soyad</label>
+                <input type="text" class="form-control" id="fullname" placeholder="Ad Soyad">
+            </div>
+            <div class="form-group mt-3">
+                <label for="username">Kullanıcı Adı</label>
+                <input type="text" class="form-control" id="username" placeholder="Kullanıcı Adı">
+            </div>
+            <div class="form-group mt-3">
+                <label for="email" >E-Posta Adresi</label>
+                <input type="email" class="form-control" id="email" placeholder="E-Posta">
+            </div>
+            <div class="form-group mt-3">
+                <label for="password" >Şifre</label>
+                <input type="password" class="form-control" id="password" placeholder="Şifre">
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save mr-2"></i> Kaydet</button>
+            </div>
+        </form>
+</div>
+</div>

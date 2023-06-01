@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Beğendiklerim";
+}
+
+<div class="row mb-4">
+    <div class="col">
+        <h3 class="display-4 border-bottom">Beğendiklerim</h3>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col table-responsive">
+        <table class="table table-hover table-striped table-sm small">
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Başlık</th>
+                    <th class="text-center">Beğenme Sayısı</th>
+                    <th class="text-center">Yorum Sayısı</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < 10; i++)
+                {
+                    <tr>
+                        <td>İnnova</td>
+                        <td>Roman Türü</td>
+                        <td class="text-sm-center">85</td>
+                        <td class="text-sm-center">24</td>
+                        <td class="text-center">
+                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal_notecomments"><i class="fa fa-comments"></i></button>
+                            <a data-toggle="modal" data-target="#modal_notedetail" class="btn btn-secondary btn-sm"><i class="fa fa-info-circle"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="modal_notecomments" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Yorumlar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="media">
+                    <img src="https://picsum.photos/id/180/64" class="mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">Umut Kürşat TUNCER</h5>
+                        <p>
+                            Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me.
+                            Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.
+                        </p>
+                        <div class="small text-lg-end text-muted"><i class="fa fa-clock mr-2"></i>30.05.2023 14:10 </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="media">
+                    <form method="post">
+                        <div class="input-group mb-2">
+                            <textarea rows="1" cols="4" class="form-control" placeholder="Yorumunuz"></textarea>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary " type="submit"><i class="fa fa-send"></i> Gönder</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa fa-close"></i> Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_notedetail" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Yazı İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>asffasfsadasfasdfadsdasfd</p>
+
+                <p>
+                    <div class="text-muted small">
+                        <div class="text-lg-end"> <i class="fa fa-user  mr-2"></i>Umut Kürşat TUNCER</div>
+                        <div class="text-lg-end"> <i class="fa fa-clock mr-2"></i>30.05.2023 11.00 </div>
+                    </div>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa fa-close"></i> Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>

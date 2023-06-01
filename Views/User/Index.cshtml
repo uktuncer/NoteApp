@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcılar";
+}
+
+<div class="row mb-4">
+    <div class="col">
+        <h3 class="display-4 border-bottom">Kullanıcılar</h3>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col">
+        <a class="btn btn-primary btn-sm" asp-action="Create"><i class="fa fa-plus"></i>Kullanıcı Ekle</a>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col table-responsive">
+        <table class="table table-hover table-sm small">
+            <thead>
+                <tr>
+                    <th>Ad Soyad</th>
+                    <th>Kullanıcı Adı</th>
+                    <th>E-posta</th>
+                    <th>Aktif</th>
+                    <th>Yönetici</th>
+                    <th>Oluşturan</th>
+                    <th>Oluşturma Tarihi</th>
+                    <th>Güncelleyen</th>
+                    <th>Güncelleme Tarihi</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < 10; i++)
+                {
+                    <tr>
+                        <td>Umut Kürşat TUNCER</td>
+                        <td>utuncer</td>
+                        <td>utuncer@partner.innova.com.tr</td>
+
+                        <td class="text-center">
+                            <i class="fa fa-user"></i>
+                        </td>
+                        <td class="text-center">
+                            <i class="fa fa-user"></i>
+                        </td>
+
+                        <td>Açıklama</td>
+                        <td>Umut Kürşat TUNCER</td>
+                        <td>31.05.2023</td>
+                        <td>Ahmet Mehmet</td>
+                        <td>31.05.2023</td>
+                        <td class="text-center">
+                            <a class="btn btn-warning btn-sm" asp-action="Edit"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-info btn-sm" asp-action="Details"><i class="fa fa-search"></i></a>
+                            <a class="btn btn-danger btn-sm" asp-action="Delete"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

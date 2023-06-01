@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Not Ekle";
+}
+<div class="row mb-4">
+    <div class="col">
+        <h3 class="display-4 border-bottom">Not Ekle</h3>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-4 ">
+        <form>
+            <div class="form-group ">
+                <label for="Category">Kategori</label>
+                <select id="Category" class="form-control">
+                    <option selected>Seçiniz</option>
+                    <option value="1">Kategori 1</option>
+                    <option value="2">Kategori 2</option>
+                </select>
+            </div>
+            <div class="form-group mt-3">
+                <label for="Title">Başlık</label>
+                <input type="text" class="form-control" id="Title" placeholder="Başlık Kısmı">
+            </div>
+            <div class="form-group mt-3">
+                <label for="Summary">Özet</label>
+                <textarea id="Summary" rows="2" class="form-control" placeholder="Özet Kısmı"></textarea>
+            </div>
+            <div class="form-group mt-3">
+                <label for="Detail">Detay</label>
+                <textarea id="Detail" rows="6" class="form-control" placeholder="Açıklama Kısmı"></textarea>
+            </div>
+            <div class="form-group form-check mt-3">
+                <input type="checkbox" class="form-check-input" id="isdraft">
+                <label class="form-check-label" for="isdraft">Taslak</label>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary btn-sm mt-3"><i class="fa fa-plus mr-2"></i> Oluştur</button>
+                <a class="btn btn-secondary btn-sm mt-3" asp-action="Index"><i class="fa fa-arrow-left"></i> Listeye Dön</a>
+            </div>
+        </form>
+    </div>
+</div>
+
