@@ -15,5 +15,7 @@ namespace NoteApp.Models.Entities
         [StringLength(160), Display(Name = "Açıklama")]
         public string Description { get; set; }
 
+        public virtual List<Note> Notes { get; set; }
+
     }
 }

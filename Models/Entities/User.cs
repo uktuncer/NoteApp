@@ -16,7 +16,7 @@ namespace NoteApp.Models.Entities
         [Required, StringLength(30), Display(Name = "Kullanıcı Adı")]
         public string UserName { get; set; }
 
-        [Required, StringLength(60), Display(Name = "E-Posta")]
+        [Required, StringLength(60), EmailAddress, Display(Name = "E-Posta")]
         public string Email { get; set; }
 
         [Required, StringLength(150), Display(Name = "Şifre")]
@@ -30,6 +30,6 @@ namespace NoteApp.Models.Entities
 
         public virtual List<Note> Notes { get; set; }
 
-        public virtual List<Note> LikedNotes { get; set; }
+        public virtual List<LikedNote> Likes { get; set; }
     }
 }
