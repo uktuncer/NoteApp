@@ -9,9 +9,9 @@ namespace NoteApp.Models.Entities
         [Key]
         public int Id { get; set; }
         [Display(Name = "Kullanıcı")]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         [Display(Name = "Note")]
-        public int NoteId { get; set; }
+        public int? NoteId { get; set; }
 
         public virtual User User { get; set; }
         public virtual Note Note { get; set; }

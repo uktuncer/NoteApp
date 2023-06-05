@@ -13,10 +13,10 @@ namespace NoteApp.Models.Entities
         public string Text { get; set; }
 
         [Display(Name = "Yorum Yapan")]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
 
         [Display(Name = "Yazı")]
-        public int NoteId { get; set; }
+        public int? NoteId { get; set; }
 
         public virtual User User { get; set; }
 

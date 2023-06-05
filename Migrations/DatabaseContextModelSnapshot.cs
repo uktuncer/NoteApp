@@ -88,7 +88,7 @@ namespace NoteApp.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("NoteId")
+                    b.Property<int?>("NoteId")
                         .HasColumnType("int");
 
                     b.Property<string>("Text")
@@ -96,7 +96,7 @@ namespace NoteApp.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -116,10 +116,10 @@ namespace NoteApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("NoteId")
+                    b.Property<int?>("NoteId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -246,15 +246,11 @@ namespace NoteApp.Migrations
                 {
                     b.HasOne("NoteApp.Models.Entities.Note", "Note")
                         .WithMany("Comments")
-                        .HasForeignKey("NoteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NoteId");
 
                     b.HasOne("NoteApp.Models.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Note");
 
@@ -265,15 +261,11 @@ namespace NoteApp.Migrations
                 {
                     b.HasOne("NoteApp.Models.Entities.Note", "Note")
                         .WithMany("Likes")
-                        .HasForeignKey("NoteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NoteId");
 
                     b.HasOne("NoteApp.Models.Entities.User", "User")
                         .WithMany("Likes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Note");
 

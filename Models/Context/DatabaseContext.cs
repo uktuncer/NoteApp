@@ -15,7 +15,7 @@ namespace NoteApp.Models.Context
         {
             if (optionsBuilder.IsConfigured == false)
             {
-                optionsBuilder.UseSqlServer("Server = localhost;Database=NotesDB;Username=INNOVA/utuncer;Trusted_Connection=true");
+                optionsBuilder.UseSqlServer("Server =(localdb)\\MSSQLLocalDB; Database=NotesDB;Trusted_Connection=true");
                 optionsBuilder.UseLazyLoadingProxies();
             }
         }
